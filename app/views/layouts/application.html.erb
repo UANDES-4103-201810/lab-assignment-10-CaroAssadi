@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<html>
+  <head>
+    <title>LabAssignment10Caroassadi</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+  <div style="position:absolute; top: 50px; right: 200px; width: 100px; text-align:right;">
+
+      <%= link_to 'Log out', destroy_user_session_path, :method => :delete %>
+      <%= link_to 'Log in', new_user_session_path, style: '' %>
+
+  </div>
+    <%= yield %>
+  </body>
+</html>
